@@ -1,5 +1,5 @@
 document.addEventListener('respondWithData', function (e) {
-    var config = JSON.parse(e.detail);
+    var config = e.detail;
 
     for (var i in config.sites) {
         if (config.sites.hasOwnProperty(i) && (config.sites[i] === window.location.href)) {
