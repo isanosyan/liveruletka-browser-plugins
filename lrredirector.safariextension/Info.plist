@@ -5,11 +5,11 @@
 	<key>Author</key>
 	<string>Ilya Sanosyan</string>
 	<key>Builder Version</key>
-	<string>7537.76.4</string>
+	<string>9537.76.4</string>
 	<key>CFBundleDisplayName</key>
-	<string>Redirector extension</string>
+	<string>lrredirector</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.awesomeroots.redirector-extension</string>
+	<string>com.awesomeroots.lrredirector</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
@@ -17,14 +17,17 @@
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>Chrome</key>
-	<dict/>
+	<dict>
+		<key>Global Page</key>
+		<string>redirector-global.html</string>
+	</dict>
 	<key>Content</key>
 	<dict>
 		<key>Scripts</key>
 		<dict>
-			<key>Start</key>
+			<key>End</key>
 			<array>
-				<string>main.js</string>
+				<string>redirector-main.js</string>
 			</array>
 		</dict>
 	</dict>
@@ -35,7 +38,12 @@
 	<key>Permissions</key>
 	<dict>
 		<key>Website Access</key>
-		<dict/>
+		<dict>
+			<key>Include Secure Pages</key>
+			<true/>
+			<key>Level</key>
+			<string>All</string>
+		</dict>
 	</dict>
 </dict>
 </plist>
