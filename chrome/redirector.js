@@ -1,10 +1,10 @@
 document.addEventListener('respondWithData', function (e) {
     var config = e.detail;
 
-    for (var i in config.sites) {
-        if (config.sites.hasOwnProperty(i) && (config.sites[i] === window.location.href)) {
+    for (var i in config.rules) {
+        if (config.rules.hasOwnProperty(i) && (i === window.location.host)) {
             if (-1 === document.getElementsByTagName('html')[0].innerHTML.search(config.test)) {
-                window.location = config.sites[(i + 1) % config.sites.length];
+                window.location = config.rules[i];
             }
         }
     }
